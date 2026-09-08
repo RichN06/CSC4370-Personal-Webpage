@@ -1,0 +1,82 @@
+<!-- Specifies that the code is written in modern HTML5 -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- sets char encoding to UTF-8 to support standard text chars -->
+        <meta charset="UTF-8">
+        <title>Home - My Website</title>
+        <!-- links the CSS file to apply visual edits to paragraphs -->
+        <link rel="stylesheet" href="stylers.css">
+    </head>
+    <body>
+        <header>
+            <section class="box grid-3col">
+                <div>
+                    <img src="images/logo.png" alt="Site Logo" class="site-logo">
+                </div>
+                <h1>Welcome to My Website</h1>
+                <div>
+                    <img src="images/logo.png" alt="Site Logo" class="site-logo">
+                </div>
+            </section>
+            <nav>
+                <!-- Clickable links that refer to the other pages on the site -->
+                <a href="home.html">Home</a> |
+                <a href="aboutSite.html">About the Website</a> |
+                <a href="aboutUs.html">About Us</a> |
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <!-- upper half of the page, displaying the "overview" section with a photo beside it -->
+            <section class="box grid-2col">
+                <!-- Overview -->
+                <div>
+                    <h2>Overview</h2>
+                    <p class="home-p1">
+                        Welcome to the main hub. This site showcases structural HTML5 elements integrated with modular CSS styling.
+                    </p>
+                    <p class="home-p2">
+                        Explore our scheduling tools, design topics, and background details using the navigation menu above.
+                    </p>
+                </div>
+                <!-- Dedicated Photo-->
+                <div>
+                    <img src="images/image1.png" alt="Featured Image" class="responsive-img">
+                </div>
+            </section>
+
+            <!-- displays a subheader, along with an unorder list (<ul>) of items via <li> -->
+            <section class="box">
+                <h2>Favorite Topics</h2>
+                <ul>
+                    <li>Web Development</li>
+                    <li>Graphic Design</li>
+                    <li>Computer Science</li>
+                </ul>
+
+                <h2>Weekly Schedule</h2>
+                <table>
+                    <tr>
+                        <th>Day</th>
+                        <th>Task</th>
+                    </tr>
+                    <tr>
+                        <td>Monday</td>
+                        <td>HTML Coding</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>CSS Styling</td>
+                    </tr>
+                </table>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 My Web Application.</p>
+        </footer>
+        
+    </body>
+</html>

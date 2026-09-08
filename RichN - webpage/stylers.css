@@ -1,0 +1,160 @@
+/*
+---------------------------------------------------------------
+COLOR PALETTE
+1. Primary Background Color: #f4f6f9 (Off-White)
+2. Card/Container Background: #ffffff (White)
+3. Main Text Color: #2c3e50 (Dark Blue-Gray)
+4. Primary Accent / Heading Color: #1a5276 (Navy Blue)
+5. Secondary Accent / Link Color: #16a085 (Teal)
+6. Hover Accent Color: #2980b9 (Ocean Blue)
+---------------------------------------------------------------
+*/
+
+/* Global Page Setup */
+body {
+    background-color: #f4f6f9;         /* Color 1 */
+    color: #2c3e50;                    /* Color 3 */
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Header & Navigation Bar */
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #ffffff;         /* Color 2 */
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+header h1 {
+    color: #1a5276;                    /* Color 4 */
+    margin: 10px 0;
+}
+
+.site-logo {
+    width: 70px;
+    height: auto;
+}
+
+nav a {
+    color: #16a085;                    /* Color 5 */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+nav a:hover {
+    color: #2980b9;                    /* Color 6 */
+    text-decoration: underline;
+}
+
+/* Box Section Containers */
+.box {
+    background-color: #ffffff;         /* Color 2 */
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.box h2 {
+    color: #1a5276;                    /* Color 4 */
+    border-bottom: 2px solid #f4f6f9;
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+
+/* Paragraph Typography Styles */
+.about-p1, .home-p1, .contact-p1 {
+    font-family: Arial, sans-serif;
+    color: #2c3e50;
+    font-size: 16px;
+}
+
+.about-p2, .home-p2, .contact-p2 {
+    font-family: 'Georgia', serif;
+    color: #2c3e50;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.about-p3, .home-p3, .contact-p3 {
+    font-family: 'Courier New', monospace;
+    color: #16a085;                    /* Color 5 */
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* Link Styling */
+a {
+    color: #16a085;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Images & Media */
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.profile-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 3px solid #1a5276;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #dcdde1;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #1a5276;
+    color: #ffffff;
+}
+
+/* -------------------------------------------------- */
+/* LAYOUT FORMATS (PLACEMENT CONTROLS)                */
+/* -------------------------------------------------- */
+
+/* 2-Column */
+.grid-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+/* 3-Column */
+.grid-3col {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #7f8c8d;
+}
