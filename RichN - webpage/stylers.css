@@ -1,75 +1,39 @@
-/*
----------------------------------------------------------------
-COLOR PALETTE
-1. Primary Background Color: #f4f6f9 (Off-White)
-2. Card/Container Background: #ffffff (White)
-3. Main Text Color: #2c3e50 (Dark Blue-Gray)
-4. Primary Accent / Heading Color: #1a5276 (Navy Blue)
-5. Secondary Accent / Link Color: #16a085 (Teal)
-6. Hover Accent Color: #2980b9 (Ocean Blue)
----------------------------------------------------------------
-*/
+/* ==========================================================================
+   COLOR PALETTE & VARIABLES 
+   ==========================================================================
+   Primary Background:      #f4f6f9 (Off-White)
+   Card/Container BG:       #ffffff (White)
+   Main Text Color:         #2c3e50 (Dark Blue-Gray)
+   Primary Accent/Heading:  #1a5276 (Navy Blue)
+   Secondary Accent/Link:   #16a085 (Teal)
+   Hover Accent:            #2980b9 (Ocean Blue)
+   Border Color:            #dcdde1 (Light Gray)
+   Muted Text:              #7f8c8d (Muted Gray)
+   ========================================================================== */
 
-/* Global Page Setup */
+/* ==========================================================================
+   GLOBAL SETUP & TYPOGRAPHY
+   ========================================================================== */
 body {
-    background-color: #f4f6f9;         /* Color 1 */
-    color: #2c3e50;                    /* Color 3 */
+    background-color: #f4f6f9;       
+    color: #2c3e50;                  
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 20px;
     line-height: 1.6;
 }
 
-/* Header & Navigation Bar */
-header {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #ffffff;         /* Color 2 */
-    border-radius: 8px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-header h1 {
-    color: #1a5276;                    /* Color 4 */
-    margin: 10px 0;
-}
-
-.site-logo {
-    width: 70px;
-    height: auto;
-}
-
-nav a {
-    color: #16a085;                    /* Color 5 */
+/* Global Links */
+a {
+    color: #16a085;
     text-decoration: none;
-    font-weight: bold;
-    padding: 0 10px;
 }
 
-nav a:hover {
-    color: #2980b9;                    /* Color 6 */
+a:hover {
     text-decoration: underline;
 }
 
-/* Box Section Containers */
-.box {
-    background-color: #ffffff;         /* Color 2 */
-    max-width: 900px;
-    margin: 0 auto 20px auto;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-}
-
-.box h2 {
-    color: #1a5276;                    /* Color 4 */
-    border-bottom: 2px solid #f4f6f9;
-    padding-bottom: 5px;
-    margin-top: 0;
-}
-
-/* Paragraph Typography Styles */
+/* Specific Paragraph Styles */
 .about-p1, .home-p1, .contact-p1 {
     font-family: Arial, sans-serif;
     color: #2c3e50;
@@ -85,19 +49,80 @@ nav a:hover {
 
 .about-p3, .home-p3, .contact-p3 {
     font-family: 'Courier New', monospace;
-    color: #16a085;                    /* Color 5 */
+    color: #16a085;                   
     font-size: 15px;
     font-weight: bold;
 }
 
-/* Link Styling */
-a {
-    color: #16a085;
-    text-decoration: none;
+/* ==========================================================================
+   SITE HEADER & NAVIGATION
+   ========================================================================== */
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #ffffff;       
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-a:hover {
+header h1 {
+    color: #1a5276;                 
+    margin: 10px 0;
+}
+
+.site-logo {
+    width: 70px;
+    height: auto;
+}
+
+nav a {
+    color: #16a085;              
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+nav a:hover {            
+    color: #2980b9;                 
     text-decoration: underline;
+}
+
+/* ==========================================================================
+   SHARED CARD & BOX CONTAINERS
+   ========================================================================== */
+.box {
+    background-color: #ffffff;      
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.box h2 {
+    color: #1a5276;               
+    border-bottom: 2px solid #f4f6f9;
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+
+/* ==========================================================================
+   REUSABLE UTILITY GRIDS & MEDIA
+   ========================================================================== */
+/* 2-Column */
+.grid-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+/* 3-Column */
+.grid-3col {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
 }
 
 /* Images & Media */
@@ -132,26 +157,41 @@ th {
     color: #ffffff;
 }
 
-/* -------------------------------------------------- */
-/* LAYOUT FORMATS (PLACEMENT CONTROLS)                */
-/* -------------------------------------------------- */
-
-/* 2-Column */
-.grid-2col {
+/* ========================================================================== 
+   CUSTOM GRID LAYOUT (portfolio.html)                             
+   ========================================================================== */
+/* Outer grid wrapper: 2 main columns (Left Content Area | Right Long Box) */
+.custom-page-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr; /* Left section takes double width of right box */
     gap: 20px;
-    align-items: center;
+    max-width: 900px;
+    margin: 0 auto 20px auto;
 }
 
-/* 3-Column */
-.grid-3col {
+/* Container for left & middle box side-by-side */
+.left-column-top {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 15px;
+    grid-template-columns: 1fr 1fr; /* Equal size left and middle boxes */
+    gap: 20px;
+    margin-bottom: 20px;
 }
 
-/* Footer Styling */
+/* Ensure boxes inside custom grid match site style without resetting max-width */
+.custom-page-grid .box {
+    max-width: none;
+    margin: 0;
+}
+
+/* Make right box span full height to match the left content area */
+.right-long-box {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   7. FOOTER
+   ========================================================================== */
 footer {
     text-align: center;
     margin-top: 30px;
