@@ -7,6 +7,8 @@
         <title>My Work</title>
         <!-- External stylesheet reference -->
         <link rel="stylesheet" href="stylers.css">
+        <!-- links the JavaScript file for theme toggle functionality -->
+        <script src="theme-toggle.js"></script>
     </head>
     <body>
         <!-- Header & Navigation Bar -->
@@ -21,11 +23,24 @@
                 </div>
             </section>
             <nav>
-                <a href="home.html">Home</a> |
-                <a href="aboutSite.html">About the Website</a> |
-                <a href="portfolio.html">My Work</a> |
-                <a href="aboutUs.html">About Us</a> | 
-                <a href="contact.html">Contact</a>
+                <div class="nav-links">
+                    <a href="home.html">Home</a>|
+                    <a href="aboutSite.html">About the Website</a>|
+                    <a href="portfolio.html">My Work</a>|
+                    <a href="aboutUs.html">About Us</a>|
+                    <a href="contact.html">Contact</a>|
+                </div>
+                <!-- Theme Toggle Switch -->
+                <div class="theme-switch-wrapper">
+                    <span>Dark Mode</span>
+                    <!-- Accessible label wrapping checkbox toggle -->
+                    <label class="theme-switch" for="theme-toggle">
+                        <!-- Hidden input element tracked by theme-toggle.js -->
+                        <input type="checkbox" id="theme-toggle" />
+                        <!-- Custom visual slider element styled in CSS -->
+                        <span class="slider round"></span>
+                    </label>
+                </div>
             </nav>
         </header>
 
